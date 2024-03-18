@@ -20,4 +20,5 @@ class Detail extends Model
     {
         return $this->belongsTo(Customer::class);
     }
+
 }

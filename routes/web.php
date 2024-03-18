@@ -26,6 +26,7 @@ Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name(
 Route::middleware(['auth', 'admin'])->name('admin.')->group(function(){
 
     Route::resource('/customer', CustomerController::class);
+
     Route::resource('/detail', DetailController::class);
 });
 

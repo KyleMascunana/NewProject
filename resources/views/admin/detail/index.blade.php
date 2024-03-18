@@ -1,6 +1,5 @@
-
-
-    <div class="py-12">
+<x-admin-layout>
+    <div class="py-1">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -18,12 +17,13 @@
 
 
                     </div>
-                    <table class="w-full">
+                    <table id="" class="display">
                         <thead class="bg-gray-50 border-b-2 border-gray-200">
                             <tr>
                                 <th class="p-3 text-sm font-semibold tracking-wide text-center">Customer ID</th>
                                 <th class="p-3 text-sm font-semibold tracking-wide text-center">Lastest Payment</th>
                                 <th class="p-3 text-sm font-semibold tracking-wide text-center">Payment Status</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -67,5 +67,6 @@
                 </div>
         </div>
     </div>
+</x-admin-layout>
 
 

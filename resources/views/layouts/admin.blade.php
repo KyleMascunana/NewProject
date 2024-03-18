@@ -19,7 +19,7 @@
         <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
         <script>
             $(document).ready( function () {
-                $('#tablesData').DataTable();
+                new DataTable('table.display');
             } );
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -52,7 +52,7 @@
                     <i class="fa-solid fa-house pr-3"></i> Dashboard
                     </x-side-nav-link>
                     <x-side-nav-link href="{{ route('admin.customer.index') }}" :active="request()->routeIs('admin.customer.index')">
-                    <i class="fa-solid fa-user pr-3"></i> Customer List
+                    <i class="fa-solid fa-user pr-3"></i> Customers
                     </x-side-nav-link>
                 </nav>
             </aside>

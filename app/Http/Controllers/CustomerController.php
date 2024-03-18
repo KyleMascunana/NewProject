@@ -12,10 +12,10 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
         $customers = Customer::all();
-        $details = Detail::paginate(5);
+        $details = Detail::all();
         return view('admin.customer.index', compact('customers', 'details'));
     }
 
@@ -67,8 +67,6 @@ class CustomerController extends Controller
         $customer->load('details');
         return view('admin.customer.show', compact('customer'));
     }
-
-
     /**
      * Show the form for editing the specified resource.
      */
