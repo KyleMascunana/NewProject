@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email')->nullable();
             $table->string('contact')->nullable();
             $table->string('user_status')->nullable();
+            $table->string('payment_status')->nullable();
             $table->string('business_name')->nullable();
             $table->string('business_location')->nullable();
             $table->timestamps();

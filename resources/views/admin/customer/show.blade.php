@@ -93,6 +93,13 @@
                                     <input type="text" value="{{ $customer->user_status }}" disabled autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                 </div>
                             </div>
+                            <div class="sm:col-span-3">
+                                <label for="user_status" class="block text-sm font-medium leading-6 text-gray-900">Payment Status</label>
+
+                                <div class="mt-2 text-lg uppercase">
+                                    <input type="text" value="{{ $customer->payment_status }}" disabled autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                </div>
+                            </div>
 
                             <div class="sm:col-span-3">
                                 <label for="payment_status" class="block text-sm font-medium leading-6 text-gray-900">Current Package Plan</label>

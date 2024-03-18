@@ -42,6 +42,7 @@ class CustomerController extends Controller
         $business_name = $request->business_name;
         $business_location = $request->business_location;
         $user_status = $request->user_status;
+        $payment_status = $request->payment_status;
 
         $data = new Customer;
 
@@ -54,6 +55,7 @@ class CustomerController extends Controller
         $data->business_name = $business_name;
         $data->business_location = $business_location;
         $data->user_status = $user_status;
+        $data->payment_status = $payment_status;
 
         $data->save();
         return to_route('admin.detail.create')->with('message', 'Customer has been Created Successfully!');

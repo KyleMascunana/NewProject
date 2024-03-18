@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
 
@@ -26,8 +27,11 @@ Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name(
 Route::middleware(['auth', 'admin'])->name('admin.')->group(function(){
 
     Route::resource('/customer', CustomerController::class);
+    Route::get('/customer/customer/{customer}', [CustomerController::class, 'view'])->name('customer.view');
 
     Route::resource('/detail', DetailController::class);
+
+    Route::resource('/report', ReportController::class);
 });
 
 

@@ -52,8 +52,11 @@
                     <i class="fa-solid fa-house pr-3"></i> Dashboard
                     </x-side-nav-link>
                     <x-side-nav-link href="{{ route('admin.customer.index') }}" :active="request()->routeIs('admin.customer.index')">
-                    <i class="fa-solid fa-user pr-3"></i> Customers
+                    <i class="fa-solid fa-user pr-3"></i> Customer List
                     </x-side-nav-link>
+                    <x-side-nav-link href="{{ route('admin.report.index') }}" :active="request()->routeIs('admin.report.index')">
+                        <i class="fa-solid fa-file pr-3"></i> Report List
+                        </x-side-nav-link>
                 </nav>
             </aside>
 
