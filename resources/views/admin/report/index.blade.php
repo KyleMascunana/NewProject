@@ -13,25 +13,24 @@
                     <table id="" class="display">
                         <thead class="bg-gray-50 border-b-2 border-gray-200">
                             <tr>
-                                <th>ID#</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Contact No.</th>
-                                <th>Business Name</th>
-                                <th>User Status</th>
-                                <th>Payment Status</th>
-                                <th>Action</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">ID#</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">Name</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">Email</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">Contact No.</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">Business Name</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">User Status</th>
+                                <th class="p-3 text-sm font-semibold tracking-wide text-center">Payment Status</th>
                             </tr>
                         </thead>
                         <tbody>
                                 @foreach ($reports as $report)
                                 <tr>
-                                    <td>{{ $report->customer_id }}</td>
-                                    <td>{{ $report->customer->name }}</td>
-                                    <td>{{ $report->customer->email }}</td>
-                                    <td>{{ $report->customer->contact }}</td>
-                                    <td>{{ $report->customer->business_name }}</td>
-                                    <td>
+                                    <td class="p-3 text-gray-700 text-sm text-center">{{ $report->customer_id }}</td>
+                                    <td class="p-3 text-gray-700 text-sm text-center">{{ $report->customer->name }}</td>
+                                    <td class="p-3 text-gray-700 text-sm text-center">{{ $report->customer->email }}</td>
+                                    <td class="p-3 text-gray-700 text-sm text-center">{{ $report->customer->contact }}</td>
+                                    <td class="p-3 text-gray-700 text-sm text-center">{{ $report->customer->business_name }}</td>
+                                    <td class="p-3 text-gray-700 text-sm text-center">
                                         @if ($report->customer->user_status == 'active')
                                         <span class="px-2 font-bold bg-green-400 border-2 border-green-400 rounded-full">
                                             {{ $report->customer->user_status }}
@@ -46,7 +45,7 @@
                                         </span>
                                     @endif
                                     </td>
-                                        <td>
+                                        <td class="p-3 text-gray-700 text-sm text-center">
                                             @if ($report->customer->payment_status == 'paid')
                                             <span class="px-2 font-bold bg-green-400 border-2 border-green-400 rounded-full">
                                                 {{ $report->customer->payment_status }}
@@ -60,13 +59,6 @@
                                                 {{ $report->customer->payment_status }}
                                             </span>
                                         @endif
-                                    </td>
-                                    <td>
-                                        <div class="items-center">
-                                            <div class="flex space-x-3">
-                                                <a href="{{ route('admin.report.show', $report->customer->id) }}" class="text-purple-500 hover:text-purple-900"><i class="fa-solid fa-eye"></i></a>
-                                            </div>
-                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

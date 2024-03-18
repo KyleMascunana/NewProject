@@ -43,7 +43,7 @@ class ReportController extends Controller
         // Assign other fields as needed
         $report->save();
 
-        return redirect()->route('reports.index')->with('success', 'Report created successfully.');
+        return redirect()->route('admin.report.index')->with('success', 'Report created successfully.');
     }
 
     /**

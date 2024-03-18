@@ -32,6 +32,7 @@ Route::middleware(['auth', 'admin'])->name('admin.')->group(function(){
     Route::resource('/detail', DetailController::class);
 
     Route::resource('/report', ReportController::class);
+    Route::get('/report/{id}/show', [ReportController::class, 'show'])->name('report.show');
 });
 
 
