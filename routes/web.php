@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
 Route::middleware(['auth', 'admin'])->name('admin.')->group(function(){

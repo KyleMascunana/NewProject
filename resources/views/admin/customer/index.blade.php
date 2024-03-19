@@ -36,7 +36,7 @@
                                     <td class="p-3 text-sm text-center">{{ $customer->client_id }}</td>
                                     <td class="p-3 text-gray-700 text-sm text-center">{{ $customer->name }}</td>
                                     <td class="p-3 text-gray-700 text-sm text-center">{{ $customer->contact }}</td>
-                                    <td class="p-3 text-gray-100 text-sm text-center">
+                                    <td class="p-3 text-gray-800 text-sm text-center">
                                         @if ($customer->user_status == 'active')
                                         <span class="px-2 font-bold bg-green-400 border-2 border-green-400 rounded-full">
                                             {{ $customer->user_status }}

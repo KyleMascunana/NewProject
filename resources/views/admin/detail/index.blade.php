@@ -31,7 +31,7 @@
                                 <tr>
                                     <td class="p-3 text-sm text-center">{{ $payment->customer_id }}</td>
                                     <td class="p-3 text-sm text-center">{{ $payment->latest_payment }}</td>
-                                    <td class="p-3 text-gray-100 text-sm text-center">
+                                    <td class="p-3 text-gray-800 text-sm text-center">
                                         @if ($payment->payment_status == 'paid')
                                         <span class="px-2 font-bold bg-green-400 border-2 border-green-400 rounded-full">
                                             {{ $payment->payment_status }}
